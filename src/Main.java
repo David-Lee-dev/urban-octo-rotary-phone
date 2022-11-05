@@ -1,4 +1,5 @@
 import hash.MyHashTable;
+import hash.MyHashTableWithSeperateChaining;
 import linkedlist.LinkedList;
 
 public class Main {
@@ -29,5 +30,15 @@ public class Main {
 
         hashTable.put("abc", "abc");
         System.out.println(hashTable.get("abc"));
+
+        MyHashTableWithSeperateChaining myHashTableWithSeperateChaining = new MyHashTableWithSeperateChaining(10);
+        myHashTableWithSeperateChaining.put("a", "a");
+        myHashTableWithSeperateChaining.put("b", "b");
+
+        System.out.println(myHashTableWithSeperateChaining.get("a"));
+        System.out.println(myHashTableWithSeperateChaining.get("b"));
+
+        myHashTableWithSeperateChaining.put("abc", "abc");
+        System.out.println(myHashTableWithSeperateChaining.get("abc"));
     }
 }
